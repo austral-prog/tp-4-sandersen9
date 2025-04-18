@@ -1,23 +1,30 @@
 def line():
-    print("TO DO")
-    #Queremos hacer un programa que nos calcule para una ecuación de primer grado la distancia sobre la recta entre dos coordenadas cualquiera del eje X y además me informe de las coordenadas del eje Y a la que corresponde
+    CoA = float(input("Ingrese el coeficiente A:"))
+    CoB = float (input ("Ingrese el coeficiente B:"))
+    CoX1 = float (input ("Ingrese el coeficiente X1:"))
+    CoX2 = float (input ("Ingrese el coeficiente X2:"))
+    Y1 = CoA * CoX1 + CoB
+    Y2 = CoA * CoX2 + CoB
+    Distancia = ((CoX2 - CoX1)**2 + (Y2 - Y1)**2)**0.5
 
-    A = float(input("Ingrese el coeficiente A: "))
-    B = float(input("Ingrese el coeficiente B: "))
-    X1 = float(input("Ingrese el coeficiente X1: "))
-    X2 = float(input("Ingrese el coeficiente X2: "))
+    print (f"El coeficiente A de su ecuación de la recta es: {CoA}")
+    print (f"El coeficiente B de su ecuación de la recta es: {CoB}")
+    print (f"El coeficiente X1 de su ecuación de la recta es: {CoX1}")
+    print (f"El coeficiente X2 de su ecuación de la recta es: {CoX2}")
 
-    print(f"(El coeficiente A de su ecuación de la recta es: {A})")
-    print(f"(El coeficiente B de su ecuación de la recta es: {B})")
-    print(f"(El coeficiente X1 de su ecuación de la recta es: {X1})")
-    print(f"(El coeficiente X2 de su ecuación de la recta es: {X2})")
-    print("\nPara la siguiente ecuacion:")
-    print(f"\tY = {A}X + {B}")
-    Y1 = A*X1 + B
-    Y2 = A*X2 + B
-    print(f"\nDados los siguientes puntos:")
-    print(f"\tP1 ({X1}, {Y1})")
-    print(f"\tP2 ({X2}, {Y2})")
-    distancia = math.sqrt((X2 - X1)**2 + (Y2 - Y1)**2)
-    print(f"\nLa distancia entre ellos es: {distancia}")
+    print ("")
+
+    print ("Para la siguiente ecuación:")
+    print (f"\tY = {CoA}X + {CoB}")
+
+    print ("")
+
+    print ("Dados los siguientes puntos:")
+    print (f"\tP1 ({CoX1}, {Y1})")
+    print (f"\tP2 ({CoX2}, {Y2})")
+
+    print ()
+
+    print (f"La distancia entre ellos es: {Distancia}")
+
 line()
